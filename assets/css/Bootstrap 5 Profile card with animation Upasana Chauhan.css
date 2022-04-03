@@ -17,11 +17,11 @@ body {
     transition: all 0.5s
 }
 
-.image img {
+.profile_pic {
     transition: all 0.5s
 }
 
-.card:hover .image img {
+.card:hover .profile_pic {
     transform: scale(1.5)
 }
 
