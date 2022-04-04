@@ -25,7 +25,7 @@ body {
     transform: scale(1.5)
 }
 
-.btn {
+.profile_pic_btn {
     height: 140px;
     width: 140px;
     border-radius: 50%
