@@ -290,5 +290,45 @@ function toggleFunction() {
     }
 }
 </script>
+
+<!-- Embed Medium and YouTube RSS Feed in Your Website -->
+<!-- https://javascript.plainenglish.io/how-to-embed-medium-rss-feed-and-youtube-rss-feed-in-your-websites-d8c37f923d77 -->
+<script>
+const mediumRssFeed = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@hungchienhsiang";
+const Max_ARTICLES = 10;
+const [articles, setArticles] = useState();
+useEffect(() => {
+  const loadArticles = async () => {
+    fetch(mediumRssFeed, {headers: {Accept: "application/json"}})
+    .then((res) => res.json())
+    .then(
+      (data) => data.items.filter( (item) => item.title.length>0 )
+    )
+    .then((newArticles) => newArticles.slice(0, Max_ARTICLES))
+    .then((articles) => setArticles(articles))
+    .catch((error) => console.log(error));
+  };
+  loadArticles();
+}, [Max_ARTICLES]);
+{articles ? articles.map((item) => (
+  <a className="link" href={item.link} target="_blank" rel="nofollow noopener noreferrer" title={tiem.title} aria-label={item.link} key={item.link}>
+    <Card className={classes.root}>
+      <CardActionArea>
+      <CardMedia className={classes.media} image={item.thumbnail} title={item.title}/>
+      <CardContent>
+        <Typography gutterBottomj variant="h5" component="h2">{item.title}</Typography>
+        <Typography variant="body2" color="textSecondary" component="p">{parseDate(item.pubDate)}</Typography>
+      </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <FacebookShareButton url={item.link}>
+          <FacebookIcon size={32} round={true}></FacebookIcon>
+        </FacebookShareButton>
+        <Button size="small" color="primary">Learn More</Button>
+      </CardActions>
+    </Card>
+  </a>
+)): "no article shown"}
+</script>
 </body>
 </html>
