@@ -1,3 +1,5 @@
+ // https://medium.datadriveninvestor.com/embed-medium-as-a-blog-on-your-site-54a1b49cbe16
+ 
  $(function () {
             var mediumPromise = new Promise(function (resolve) {
             var $content = $('#jsonContent');
