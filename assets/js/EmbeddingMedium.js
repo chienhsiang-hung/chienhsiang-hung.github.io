@@ -1,12 +1,12 @@
  // https://medium.datadriveninvestor.com/embed-medium-as-a-blog-on-your-site-54a1b49cbe16
- 
+
  $(function () {
             var mediumPromise = new Promise(function (resolve) {
             var $content = $('#jsonContent');
             var data = {
                 rss: 'https://medium.com/feed/@hungchienhsiang'
             };
-            $.get(' https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40hungchienhsiang', data, function (response) {
+            $.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40hungchienhsiang', data, function (response) {
                 if (response.status == 'ok') {
                     $("#logo").append(`<img src="${response.feed["image"]}" class="rounded mx-auto d-block">`)
                     var display = '';
