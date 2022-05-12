@@ -2,19 +2,21 @@
   <head>
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <py-env>
+        - pandas
+        - paths:
+          - /test.csv
+    </py-env>
   </head>
   <body>
       <py-script>
-print("Let's compute π:")
-def compute_pi(n):
-    pi = 2
-    for i in range(1,n):
-        pi *= 4 * i ** 2 / (4 * i ** 2 - 1)
-    return pi
 
-pi = compute_pi(100000)
-s = f"π is approximately {pi:.3f}"
-print(s)
+import pandas as pd
+print('hi')
+a = pd.read_csv('test.csv')
+print(a)
+print('hi')
+
       </py-script>
   </body>
 </html>
