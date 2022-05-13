@@ -310,7 +310,8 @@ import matplotlib.pyplot as plt
 
 TradeHistory = pd.read_excel('./assets/py/TradeHistory.xlsx', index_col=0)
 TradeHistory = TradeHistory[['std_TWIDX', 'std_AUM']]
-TradeHistory.plot.line()
+TradeHistory = TradeHistory.plot.line()
+TradeHistory
 </py-script>
 </body>
 </html>
