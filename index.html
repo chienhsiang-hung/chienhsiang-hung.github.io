@@ -40,7 +40,7 @@
   - pandas
   - matplotlib
   - paths:
-    - ./assets/py/TradeHistory.xlsx
+    - ./TradeHistory.xlsx
 </py-env>
 
 <style>
@@ -308,7 +308,7 @@ function toggleFunction() {
 import pandas as pd
 import matplotlib.pyplot as plt
 
-TradeHistory = pd.read_excel('./assets/py/TradeHistory.xlsx', index_col=0)
+TradeHistory = pd.read_excel('./TradeHistory.xlsx', index_col=0)
 TradeHistory = TradeHistory[['std_TWIDX', 'std_AUM']]
 TradeHistory.plot.line()
 </py-script>
