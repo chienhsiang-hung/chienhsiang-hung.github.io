@@ -5,6 +5,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!-- pyscript -->
+<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+<py-env>
+  - pandas
+  - openpyxl
+  - matplotlib
+  - paths:
+    - ./TradeHistory.xlsx
+</py-env>
+
 <!-- Bootstrap 4 CSS library for Embedding Medium -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -32,17 +43,6 @@
 <meta name="theme-color" content="#ffffff">
 <!-- Then check it here -->
 <!-- https://favicon.io/ -->
-
-<!-- pyscript -->
-<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-<py-env>
-  - pandas
-  - openpyxl
-  - matplotlib
-  - paths:
-    - ./TradeHistory.xlsx
-</py-env>
 
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
