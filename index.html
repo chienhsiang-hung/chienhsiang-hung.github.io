@@ -33,6 +33,16 @@
 <!-- Then check it here -->
 <!-- https://favicon.io/ -->
 
+<!-- pyscript -->
+<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+<py-env>
+  - pandas
+  - matplotlib
+  - paths:
+    - ./assets/py/TradeHistory.xlsx
+</py-env>
+
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
@@ -202,6 +212,9 @@ body, html {
 
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
+  
+  <div class="w3-center" id="MyAUMTrend"></div>
+  
   <h3 class="w3-center">MY WORK</h3>
   <p class="w3-center"><em>Here are some of my latest projects and ideas.<br>Click on the Read More to check out more</em></p>
   
@@ -291,5 +304,13 @@ function toggleFunction() {
     }
 }
 </script>
+<py-script out="MyAUMTrend">
+import pandas as pd
+import matplotlib.pyplot as plt
+
+TradeHistory = pd.read_excel('./assets/py/TradeHistory.xlsx', index_col=0)
+TradeHistory = TradeHistory[['std_TWIDX', 'std_AUM']]
+TradeHistory.plot.line()
+</py-script>
 </body>
 </html>
