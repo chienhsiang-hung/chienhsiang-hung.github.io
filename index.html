@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- pyscript -->
+<!-- pyscript 
 <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
 <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 <py-env>
@@ -14,7 +14,7 @@
   - matplotlib
   - paths:
     - ./TradeHistory.xlsx
-</py-env>
+</py-env> -->
 
 <!-- Bootstrap 4 CSS library for Embedding Medium -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -214,7 +214,7 @@ body, html {
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
   
-  <div class="w3-center" id="MyAUMTrend"></div>
+  <!-- <div class="w3-center" id="MyAUMTrend"></div> -->
   
   <h3 class="w3-center">MY WORK</h3>
   <p class="w3-center"><em>Here are some of my latest projects and ideas.<br>Click on the Read More to check out more</em></p>
@@ -305,6 +305,7 @@ function toggleFunction() {
     }
 }
 </script>
+<!--
 <py-script output="MyAUMTrend">
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -321,5 +322,6 @@ ax.grid()
 
 fig
 </py-script>
+-->
 </body>
 </html>
