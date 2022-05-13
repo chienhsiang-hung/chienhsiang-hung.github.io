@@ -310,9 +310,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 TradeHistory = pd.read_excel('./TradeHistory.xlsx', index_col=0)
-TradeHistory = TradeHistory[['std_TWIDX', 'std_AUM']]
-TradeHistory = TradeHistory.plot.line()
-TradeHistory
+# TradeHistory = TradeHistory[['std_TWIDX', 'std_AUM']]
+
+fig, ax = plt.subplots()
+
+ax.plot(TradeHistory['std_TWIDX'])
+ax.plot(TradeHistory['std_AUM'])
+ax.set(xlabel='Time', ylabel='Standerized Performance', title='My Quant Fund Performance vs. TWIDX')
+ax.grid()
+
+fig
 </py-script>
 </body>
 </html>
