@@ -6,14 +6,7 @@
 <body>
 <h3>test</h3>
 <script>
-
-fetch("./test.json")
-.then(response => {
-   return response.json();
-})
-.then(jsondata => console.log(jsondata));
-
-const jsonData = require('./test.json');
+const jsonData = require(['./test.json']);
 console.log(jsonData)
 </script>
 </body>
