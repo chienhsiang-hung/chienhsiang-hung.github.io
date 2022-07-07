@@ -15,9 +15,11 @@
                     $.each(
                         response.items,
                         function (k, item) {
-                            display += `<div class="medium-card mb-3 mx-auto mr-5 " style="width: 20rem;">`;
+                            display += `<div class="card medium-card mb-3 mx-auto mr-5" style="width: 20rem;">`;
                             var src = item["thumbnail"]; // use thumbnail url
-                            display += `  <img src="${src}" class="card-img-top" alt="Cover image">`;
+                            display += `  <span>
+                                            <img src="${src}" class="card-img-top" alt="Cover image">
+                                          </span>`;
                             display += `  <div class="card-body">`;
                             display += `    <h5 class="card-title">${item.title}</h5>`;
                             
