@@ -42,14 +42,14 @@
     
     mediumPromise.then(function() {
         //Pagination
-        pageSize = 4;
+        pageSize = 3;
 
         var pageCount = $(".medium-card").length / pageSize;
 
         for (var i = 0; i < pageCount; i++) {
             $("#pagin").append(`<a class="page-link" href="#">${(i + 1)}</a>`);
         }
-        $("#pagin li:nth-child(1)").addClass("active");
+        $("#pagin a:nth-child(1)").addClass("active");
         showPage = function (page) {
             $(".medium-card").hide();
             $(".medium-card").each(function (n) {
