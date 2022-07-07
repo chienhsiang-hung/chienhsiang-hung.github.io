@@ -5,6 +5,7 @@
         var $content = $('#jsonContent');
         var data = {rss: 'https://medium.com/feed/@hungchienhsiang'};
 
+        // use http://jsonviewer.stack.hu/ to check json file easier
         $.get(
             'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40hungchienhsiang',
             data,
@@ -20,12 +21,13 @@
                             display += `  <div class="card-body">`;
                             display += `    <h5 class="card-title">${item.title}</h5>`;
                             
-                            display += '<p>'
+                            // add categories
+                            display += '    <p>'
                             var categories = item["categories"];
 							for (var i=0; i<categories.length; i++){
-                            	display += `<a href="#"><i>#${categories[i]}&nbsp;</i></a>`
+                            	display += `  <a href="#"> <i>#${categories[i]}</i>&nbsp; </a>`
                             }
-							display += '</p>'
+							display += '    </p>'
                             
                             display += `    <a href="${item.link}" target="_blank" class="btn btn-outline-success" >Read More</a>`;
                             display += `  </div>
@@ -46,7 +48,7 @@
         for (var i = 0; i < pageCount; i++) {
             $("#pagin").append(`<a class="page-link" href="#">${(i + 1)}</a>`);
         }
-        
+
         $("#pagin a:nth-child(1)").addClass("active");
         showPage = function (page) {
             $(".medium-card").hide();
