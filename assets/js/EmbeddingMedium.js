@@ -33,7 +33,6 @@
                             return k < 10;
                         }
                     );
-        
                     resolve($content.html(display));
                 }
             }
@@ -43,12 +42,11 @@
     mediumPromise.then(function() {
         //Pagination
         pageSize = 3;
-
         var pageCount = $(".medium-card").length / pageSize;
-
         for (var i = 0; i < pageCount; i++) {
             $("#pagin").append(`<a class="page-link" href="#">${(i + 1)}</a>`);
         }
+        
         $("#pagin a:nth-child(1)").addClass("active");
         showPage = function (page) {
             $(".medium-card").hide();
