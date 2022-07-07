@@ -10,7 +10,6 @@
             data,
             function (response) {
                 if (response.status == 'ok') {
-                    $("#logo").append(`<img src="${response.feed["image"]}" class="rounded mx-auto d-block">`)
                     var display = '';
                     $.each(
                         response.items,
@@ -28,10 +27,11 @@
                             //trim the string to the maximum length
                             var trimmedString = yourString.substr(0, maxLength);
                             //re-trim if we are in the middle of a word
-                            trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
+                            trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")));
                             display += `    <p class="card-text">${trimmedString}...</p>`;
                             display += `    <a href="${item.link}" target="_blank" class="btn btn-outline-success" >Read More</a>`;
-                            display += '</div></div>';
+                            display += `  </div>
+                                        </div>`;
                             return k < 10;
                         }
                     );
@@ -42,32 +42,31 @@
         );
     });
 
-    mediumPromise.then(function()
-                {
-                    //Pagination
-                    pageSize = 4;
+    mediumPromise.then(function() {
+        //Pagination
+        pageSize = 4;
 
-                    var pageCount = $(".card").length / pageSize;
+        var pageCount = $(".card").length / pageSize;
 
-                    for (var i = 0; i < pageCount; i++) {
-                        $("#pagin").append(`<li class="page-item"><a class="page-link" href="#">${(i + 1)}</a></li> `);
-                    }
-                    $("#pagin li:nth-child(1)").addClass("active");
-                    showPage = function (page) {
-                        $(".card").hide();
-                        $(".card").each(function (n) {
-                            if (n >= pageSize * (page - 1) && n < pageSize * page)
-                                $(this).show();
-                        });
-                    }
+        for (var i = 0; i < pageCount; i++) {
+            $("#pagin").append(`<li class="page-item"><a class="page-link" href="#">${(i + 1)}</a></li> `);
+        }
+        $("#pagin li:nth-child(1)").addClass("active");
+        showPage = function (page) {
+            $(".card").hide();
+            $(".card").each(function (n) {
+                if (n >= pageSize * (page - 1) && n < pageSize * page)
+                    $(this).show();
+            });
+        }
 
-                    showPage(1);
+        showPage(1);
 
-                    $("#pagin li").click(function () {
-                        $("#pagin li").removeClass("active");
-                        $(this).addClass("active");
-                        showPage(parseInt($(this).text()))
-                        return false;
-                    });
+        $("#pagin li").click(function () {
+            $("#pagin li").removeClass("active");
+            $(this).addClass("active");
+            showPage(parseInt($(this).text()))
+            return false;
+        });
     });
 });
