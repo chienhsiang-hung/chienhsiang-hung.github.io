@@ -18,17 +18,15 @@
                             var src = item["thumbnail"]; // use thumbnail url
                             display += `  <img src="${src}" class="card-img-top" alt="Cover image">`;
                             display += `  <div class="card-body">`;
-                            display += `    <h5 class="card-title"> <a href="${item.link}">${item.title}</a> </h5>`;
-
-                            var yourString = item.description.replace(/<img[^>]*>/g,""); //replace with your string.
-                            yourString = yourString.replace('h4', 'p');
-                            yourString = yourString.replace('h3', 'p');
-                            var maxLength = 120; // maximum number of characters to extract
-                            //trim the string to the maximum length
-                            var trimmedString = yourString.substr(0, maxLength);
-                            //re-trim if we are in the middle of a word
-                            trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")));
-                            display += `    <p class="card-text">${trimmedString}...</p>`;
+                            display += `    <h5 class="card-title">${item.title}</h5>`;
+                            
+                            display += '<p>'
+                            var categories = item["categories"];
+							for (var i=0; i<categories.length; i++){
+                            	display += `<a href="#"><i>#${categories[i]}&nbsp;</i></a>`
+                            }
+							display += '</p>'
+                            
                             display += `    <a href="${item.link}" target="_blank" class="btn btn-outline-success" >Read More</a>`;
                             display += `  </div>
                                         </div>`;
@@ -41,7 +39,7 @@
             }
         );
     });
-
+    
     mediumPromise.then(function() {
         //Pagination
         pageSize = 4;
@@ -49,7 +47,7 @@
         var pageCount = $(".card").length / pageSize;
 
         for (var i = 0; i < pageCount; i++) {
-            $("#pagin").append(`<li class="page-item"><a class="page-link" href="#">${(i + 1)}</a></li> `);
+            $("#pagin").append(`<a class="page-link" href="#">${(i + 1)}</a>`);
         }
         $("#pagin li:nth-child(1)").addClass("active");
         showPage = function (page) {
@@ -69,4 +67,5 @@
             return false;
         });
     });
+  
 });
