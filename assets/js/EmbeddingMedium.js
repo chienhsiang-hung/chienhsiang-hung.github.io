@@ -17,9 +17,10 @@
                         function (k, item) {
                             display += `<div class="card mb-3 mx-auto mr-5 " style="width: 20rem;">`;
                             var src = item["thumbnail"]; // use thumbnail url
-                            display += `<img src="${src}" class="card-img-top" alt="Cover image">`;
-                            display += `<div class="card-body">`;
-                            display += `<h5 class="card-title"><a href="${item.link}">${item.title}</a></h5>`;
+                            display += `  <img src="${src}" class="card-img-top" alt="Cover image">`;
+                            display += `  <div class="card-body">`;
+                            display += `    <h5 class="card-title"> <a href="${item.link}">${item.title}</a> </h5>`;
+
                             var yourString = item.description.replace(/<img[^>]*>/g,""); //replace with your string.
                             yourString = yourString.replace('h4', 'p');
                             yourString = yourString.replace('h3', 'p');
@@ -28,9 +29,8 @@
                             var trimmedString = yourString.substr(0, maxLength);
                             //re-trim if we are in the middle of a word
                             trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
-                            display += `<p class="card-text">${trimmedString}...</p>`;
-                            
-                            display += `<a href="${item.link}" target="_blank" class="btn btn-outline-success" >Read More</a>`;
+                            display += `    <p class="card-text">${trimmedString}...</p>`;
+                            display += `    <a href="${item.link}" target="_blank" class="btn btn-outline-success" >Read More</a>`;
                             display += '</div></div>';
                             return k < 10;
                         }
