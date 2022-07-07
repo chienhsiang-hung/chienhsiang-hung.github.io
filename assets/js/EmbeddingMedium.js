@@ -25,7 +25,7 @@
                             display += '    <p>'
                             var categories = item["categories"];
 							for (var i=0; i<categories.length; i++){
-                            	display += `  <a href="#"> <i>#${categories[i]}</i>&nbsp; </a>`
+                            	display += `  <a href="#"><i>#${categories[i]}</i></a> &nbsp;`
                             }
 							display += '    </p>'
                             
