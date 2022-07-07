@@ -60,8 +60,8 @@
 
         showPage(1);
 
-        $("#pagin li").click(function () {
-            $("#pagin li").removeClass("active");
+        $("#pagin a").click(function () {
+            $("#pagin a").removeClass("active");
             $(this).addClass("active");
             showPage(parseInt($(this).text()))
             return false;
