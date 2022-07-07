@@ -14,7 +14,7 @@
                     $.each(
                         response.items,
                         function (k, item) {
-                            display += `<div class="card mb-3 mx-auto mr-5 " style="width: 20rem;">`;
+                            display += `<div class="medium-card mb-3 mx-auto mr-5 " style="width: 20rem;">`;
                             var src = item["thumbnail"]; // use thumbnail url
                             display += `  <img src="${src}" class="card-img-top" alt="Cover image">`;
                             display += `  <div class="card-body">`;
@@ -44,15 +44,15 @@
         //Pagination
         pageSize = 4;
 
-        var pageCount = $(".card").length / pageSize;
+        var pageCount = $(".medium-card").length / pageSize;
 
         for (var i = 0; i < pageCount; i++) {
             $("#pagin").append(`<a class="page-link" href="#">${(i + 1)}</a>`);
         }
         $("#pagin li:nth-child(1)").addClass("active");
         showPage = function (page) {
-            $(".card").hide();
-            $(".card").each(function (n) {
+            $(".medium-card").hide();
+            $(".medium-card").each(function (n) {
                 if (n >= pageSize * (page - 1) && n < pageSize * page)
                     $(this).show();
             });
