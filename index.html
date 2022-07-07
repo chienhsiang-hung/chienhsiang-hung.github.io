@@ -109,6 +109,10 @@ body, html {
   opacity: 1;
 }
 
+#pagin {
+	display: flex;
+  justify-content: center;
+}
 /* https://www.w3schools.com/howto/howto_css_pagination.asp */
 #pagin a {
   color: black;
@@ -262,9 +266,10 @@ body, html {
 
   <h4 class="w3-center">MY MEDIUM</h4>
   <p class="w3-center"><em>Here are some of my latest projects and ideas.<br>Click on the Read More to check out more</em></p>
-  <div class="row" id="jsonContent"></div>
-  <div class="w3-center" id="pagin"></div>
-
+  <div>
+    <div class="row" id="jsonContent"></div>
+    <div id="pagin"></div>
+  </div>
 </div>
 
 <!-- Third Parallax Image with Portfolio Text -->
