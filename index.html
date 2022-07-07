@@ -108,6 +108,20 @@ body, html {
   visibility: visible;
   opacity: 1;
 }
+
+/* https://www.w3schools.com/howto/howto_css_pagination.asp */
+#pagin a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+#pagin a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+#pagin a:hover:not(.active) {background-color: #ddd;}
 </style>
 </head>
 <body>
