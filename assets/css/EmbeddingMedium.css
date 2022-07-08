@@ -1,8 +1,11 @@
+.medium-card {
+  transition: all 0.5s;
+}
 .medium-card span {
     padding: 8px 8px 8px 8px;
 }
 /* https://stackoverflow.com/questions/11552380/how-to-automatically-crop-and-center-an-image */
-.medium-card span img {
+.medium-card img {
     width: 200px;
     height: 200px;
     object-fit: cover; /* https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit */
