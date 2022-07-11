@@ -241,19 +241,17 @@ body, html {
 
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
-  
-  <!-- <div class="w3-center" id="MyAUMTrend"></div> -->
-  <figure class="highcharts-figure">
-    <div id="container"></div>
-  </figure>
-
-  <h4 class="w3-center">MY MEDIUM</h4>
+  <h3 class="w3-center">MY MEDIUM</h3>
   <p class="w3-center"><em>Here are some of my latest projects and ideas.<br>Click on the Read More to check out more</em></p>
   <div>
     <!-- EmbeddingMedium -->
     <div class="row" id="jsonContent"></div>
     <div id="pagin"></div>
   </div>
+  <!-- <div class="w3-center" id="MyAUMTrend"></div> -->
+  <figure class="highcharts-figure">
+    <div id="container"></div>
+  </figure>
 </div>
 
 <!-- Third Parallax Image with Portfolio Text -->
@@ -336,6 +334,7 @@ function toggleFunction() {
     }
 }
 </script>
+
 <!--
 <py-script output="MyAUMTrend">
 import pandas as pd
@@ -361,144 +360,9 @@ fig
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-<script>
-    // A point click event that uses the Renderer to draw a label next to the point
-    // On subsequent clicks, move the existing label instead of creating a new one.
-    Highcharts.addEvent(Highcharts.Point, 'click', function () {
-        if (this.series.options.className.indexOf('popup-on-click') !== -1) {
-            const chart = this.series.chart;
-            const date = Highcharts.dateFormat('%A, %b %e, %Y', this.x);
-            const text = `<b>${date}</b><br/>${this.y} ${this.series.name}`;
+<script src="assets/js/MyQuantFundChart.js"></script>
 
-            const anchorX = this.plotX + this.series.xAxis.pos;
-            const anchorY = this.plotY + this.series.yAxis.pos;
-            const align = anchorX < chart.chartWidth - 200 ? 'left' : 'right';
-            const x = align === 'left' ? anchorX + 10 : anchorX - 10;
-            const y = anchorY - 30;
-            if (!chart.sticky) {
-                chart.sticky = chart.renderer
-                    .label(text, x, y, 'callout',  anchorX, anchorY)
-                    .attr({
-                        align,
-                        fill: 'rgba(0, 0, 0, 0.75)',
-                        padding: 10,
-                        zIndex: 7 // Above series, below tooltip
-                    })
-                    .css({
-                        color: 'white'
-                    })
-                    .on('click', function () {
-                        chart.sticky = chart.sticky.destroy();
-                    })
-                    .add();
-            } else {
-                chart.sticky
-                    .attr({ align, text })
-                    .animate({ anchorX, anchorY, x, y }, { duration: 250 });
-            }
-        }
-    });
-
-
-    Highcharts.chart('container', {
-
-        chart: {
-            scrollablePlotArea: {
-                minWidth: 700
-            }
-        },
-
-        data: {
-            csvURL: 'https://raw.githubusercontent.com/chienhsiang-hung/chienhsiang-hung.github.io/main/TradeHistory.csv',
-            beforeParse: function (csv) {
-                return csv.replace(/\n\n/g, '\n');
-            }
-        },
-
-        title: {
-            text: 'MY QUANT FUND PERFORMANCE'
-        },
-
-        subtitle: {
-            text: ''
-        },
-
-        xAxis: {
-            tickInterval: 7 * 24 * 3600 * 1000, // one week
-            tickWidth: 0,
-            gridLineWidth: 1,
-            labels: {
-                align: 'left',
-                x: 3,
-                y: -3
-            }
-        },
-
-        yAxis: [{ // left y axis
-            title: {
-                text: null
-            },
-            labels: {
-                align: 'left',
-                x: 3,
-                y: 16,
-                format: '{value:.,0f}'
-            },
-            showFirstLabel: false
-        }, { // right y axis
-            linkedTo: 0,
-            gridLineWidth: 0,
-            opposite: true,
-            title: {
-                text: null
-            },
-            labels: {
-                align: 'right',
-                x: -3,
-                y: 16,
-                format: '{value:.,0f}'
-            },
-            showFirstLabel: false
-        }],
-
-        legend: {
-            align: 'left',
-            verticalAlign: 'top',
-            borderWidth: 0
-        },
-
-        tooltip: {
-            shared: true,
-            crosshairs: true
-        },
-
-        plotOptions: {
-            series: {
-                cursor: 'pointer',
-                className: 'popup-on-click',
-                marker: {
-                    lineWidth: 1
-                }
-            }
-        }
-    });
-</script>
-
-<script>
-function Copyidd1() {
-  var copyText = document.getElementsByClassName("idd2");
-  navigator.clipboard.writeText( copyText[0].innerHTML );
-
-  document.getElementById('myTooltip').style.width = "200px";
-  var tooltip = document.getElementById('myTooltip');
-  tooltip.innerHTML = "Copied: " + copyText[0].innerHTML;
-}
-function outCopyidd1() {
-  document.getElementById('myTooltip').style.width = "140px";
-  var tooltip = document.getElementById('myTooltip');
-  tooltip.innerHTML = "Copy to clipboard";
-}
-</script>
+<script src="assets/js/Copyidd1.js"></script>
 
 </body>
 </html>
