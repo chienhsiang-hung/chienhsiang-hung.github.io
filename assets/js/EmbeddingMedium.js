@@ -42,8 +42,13 @@
     });
     
     mediumPromise.then(function() {
+
+        /* Sometimes it's also useful to use window.innerWidth (not typically found on mobile devices) instead of screen width 
+        when dealing with desktop browsers where the window size is often less than the device screen size. */
+        var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
         //Pagination
-        pageSize = 3;
+        pageSize = (width < 768) ? 1 : 3;
         var pageCount = $(".medium-card").length / pageSize;
         for (var i = 0; i < pageCount; i++) {
             $("#pagin").append(`<a class="page-link" href="#">${(i + 1)}</a>`);
