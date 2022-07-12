@@ -15,7 +15,7 @@
                 if (response.status == 'ok') {
                     var display = '';
                     // let number of card responsive
-                    var TotalCard = (width < 768) ? 6 : 10;
+                    var TotalCard = (width < 768) ? 5 : 9;
                     $.each(
                         response.items,
                         function (k, item) {
