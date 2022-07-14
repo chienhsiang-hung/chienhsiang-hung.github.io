@@ -11,6 +11,16 @@
 .medium-card img {transition: all 0.5s;}
 .medium-card:hover img {transform: scale(1.2);}
 
+/* add Fading animation https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow */
+.medium-card {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4;}
+  to {opacity: 1;}
+}
+
 #pagin {
   display: flex;
   justify-content: center;
