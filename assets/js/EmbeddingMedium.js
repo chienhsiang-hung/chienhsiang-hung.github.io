@@ -19,12 +19,12 @@
                     $.each(
                         response.items,
                         function (k, item) {
-                            display += `<div class="card medium-card mb-3 mx-auto mr-5" style="width: 20rem;">`;
+                            display += `<div class="card medium-card mb-3 mx-auto mr-5" style="width:20rem; height:30rem;">`;
                             var src = item["thumbnail"]; // use thumbnail url
                             display += `  <span>
                                             <img src="${src}" class="card-img-top" alt="Cover image">
                                           </span>`;
-                            display += `  <div class="card-body">`;
+                            display += `  <div class="card-body" style="padding: 0 1rem 1rem 1rem;">`;
                             display += `    <h5 class="card-title">${item.title}</h5>`;
                             
                             // add categories
@@ -47,30 +47,64 @@
         );
     });
     
+    // make Pagination
     mediumPromise.then(function() {
         // make Pagination reponsive
         pageSize = (width < 768) ? 1 : 3;
         var pageCount = $(".medium-card").length / pageSize;
-        for (var i = 0; i < pageCount; i++) {
-            $("#pagin").append(`<a class="page-link" href="#">${(i + 1)}</a>`);
-        }
 
-        $("#pagin a:nth-child(1)").addClass("active");
+        $("#pagin").append(`<a class="page-link" href="javascript:void(0);">&laquo;</a>`);
+        for (var i = 0; i < pageCount; i++) {
+            $("#pagin").append(`<a class="page-link" href="javascript:void(0);">${(i + 1)}</a>`);
+        }
+        $("#pagin").append(`<a class="page-link" href="javascript:void(0);">&raquo;</a>`);
+
+        $("#pagin a:nth-child(2)").addClass("active");
+
+        
         showPage = function (page) {
             $(".medium-card").hide();
-            $(".medium-card").each(function (n) {
-                if (n >= pageSize * (page - 1) && n < pageSize * page)
-                    $(this).show();
-            });
+            $(".medium-card").each(
+                function (n) {
+                    if (n >= pageSize * (page - 1) && n < pageSize * page)
+                        $(this).show();
+                }
+            );
         }
-
         showPage(1);
 
+        var pageNum = 1;
         $("#pagin a").click(function () {
+
+            if ($(this).text() == "«") {
+                // pre button error handling
+                pageNum--;
+                if (pageNum < 1) {
+                    pageNum++;
+                    return false;
+                }
+                else {
+                    showPage(pageNum)
+                }
+            } else if ($(this).text() == "»"){
+                // nex button error handling
+                pageNum++;
+                if (pageNum > pageCount) {
+                    pageNum--;
+                    return false;
+                }
+                else {
+                    showPage(pageNum)
+                }
+            } else {
+                pageNum = parseInt($(this).text());
+                showPage(pageNum)
+            }
+
+            // refresh the pagebutton <a>
             $("#pagin a").removeClass("active");
-            $(this).addClass("active");
-            showPage(parseInt($(this).text()))
-            return false;
+            $(`#pagin a:nth-child(${pageNum+1})`).addClass("active");
+            
         });
     });
   
