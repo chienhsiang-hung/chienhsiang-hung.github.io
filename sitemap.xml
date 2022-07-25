@@ -3,12 +3,17 @@
     <!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
     <url>
         <loc>https://chienhsiang-hung.github.io/</loc>
-        <lastmod>2022-07-21T15:22:03+00:00</lastmod>
+        <lastmod>2022-07-25T13:15:10+00:00</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
         <loc>https://chienhsiang-hung.github.io/pyscript/pyscript-hello-world</loc>
-        <lastmod>2022-07-21T15:03:58+00:00</lastmod>
+        <lastmod>2022-07-24T05:49:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://chienhsiang-hung.github.io/option-man/</loc>
+        <lastmod>2022-07-25T13:09:23+00:00</lastmod>
         <priority>0.80</priority>
     </url>
 </urlset>
