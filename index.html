@@ -163,7 +163,9 @@ body, html {
         <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM6.646 5.646a.5.5 0 1 1 .708.708L5.707 8l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2zm2.708 0 2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 1 1 .708-.708z"/>
       </svg> LANGSWITCHER</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+        <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z"/>
+      </svg>
     </a>
   </div>
 
@@ -174,7 +176,6 @@ body, html {
     <a href="https://chienhsiang-hung.github.io/kaggle-profile-summary-card" class="w3-bar-item w3-button" onclick="toggleFunction()">KAGGLECARD</a>
     <a href="https://chienhsiang-hung.github.io/option-man" class="w3-bar-item w3-button" onclick="toggleFunction()">OPTIONMAN</a>
     <a href="https://chienhsiang-hung.github.io/javascript-language-switcher/" class="w3-bar-item w3-button" onclick="toggleFunction()">LANGSWITCHER</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
 </div>
 
@@ -213,7 +214,6 @@ body, html {
                     <span>
                       IT Manager, DDI at WAM - one of the biggest family offices offering tailor-made financial services to high-net-worth individuals.<br><br>
                       Full Stack Developer, Kaggle All-round Expert<br><br>
-                      #CloudDeployment #APIBuilding&Integration #PowerPlatformDevelopment #RPA #DataScience #MachineLearning #FinTech #Web #Vercel #Boostrap #React #Angular
                     </span>
                 </div>
                 <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center">
@@ -288,15 +288,21 @@ body, html {
       </div>
       <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
 
-      <form action="" method="post" enctype="text/plain">
+      <form 
+        action = "https://formkeep.com/f/4adcfc7f1391"
+        accept-charset = "UTF-8"
+        enctype = "multipart/form-data"
+        method = "POST"
+      >
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
             <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
           </div>
           <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Phone" required name="Phone">
+            <input class="w3-input w3-border" type="text" placeholder="Phone" name="Phone">
           </div>
         </div>
+        <input class="w3-input w3-border" style="margin-bottom: 8px;" type="text" placeholder="Email" required name="Email">
         <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
         <button class="w3-button w3-black w3-right w3-section" type="" value="Send">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
