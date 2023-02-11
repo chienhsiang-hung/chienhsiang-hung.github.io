@@ -4,8 +4,8 @@ import myImg from "../../Assets/avatar.png";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
   AiFillInstagram,
+  AiFillMediumCircle,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -22,7 +22,9 @@ function Home2() {
               I am an <b className="purple">IT Manager</b> of Data and Digital Integration Team at WAM - one of the biggest family offices offering tailor-made financial services to high-net-worth individuals. I build a CRM system, Structured-products Quotation system, Risk Monitor, Portfolio Management system, etc.
               <br />
               <br />I am fluent in classics like
-              <i><b className="purple"> Python </b></i>and<i><b className="purple"> JavaScript </b></i>
+              <i>
+                <b className="purple"> Python and JavaScript</b>.
+              </i>
 
               <br />
               <br />
@@ -30,9 +32,10 @@ function Home2() {
               <i>
                 <b className="purple">Web Technologies and Products </b> and
                 also in areas related to{" "}
-                <b className="purple">RPA, Web Scraping, Reverse Engineering, Machine Learning </b>
-                and <b className="purple">Deep Learning</b>.
-              </i>
+                <b className="purple">
+                  RPA, Web Scraping, Reverse Engineering, Machine Learning, and Deep Learning
+                </b>
+              </i>.
               <br />
               <br />
               Whenever possible, I also apply my passion for developing products
@@ -46,7 +49,7 @@ function Home2() {
               &nbsp; like
               <i>
                 <b className="purple"> React.js and Next.js</b>
-              </i>
+              </i>.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -64,7 +67,7 @@ function Home2() {
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
-                  href="https://github.com/chienhsiang-hung"
+                  href="https://github.com/chienhsiang-hung/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -74,17 +77,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://twitter.com/Soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/soumyajit4419/"
+                  href="https://www.linkedin.com/in/chien-hsiang-hung/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -94,12 +87,22 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.instagram.com/soumyajit4419"
+                  href="https://www.instagram.com/hung_chienhsiang/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
                   <AiFillInstagram />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://hungchienhsiang.medium.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <AiFillMediumCircle />
                 </a>
               </li>
             </ul>
