@@ -8,6 +8,7 @@ import {
   AiFillMediumCircle,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { ContactUs } from "./Contact";
 
 function Home2() {
   return (
@@ -106,6 +107,7 @@ function Home2() {
                 </a>
               </li>
             </ul>
+            <ContactUs />
           </Col>
         </Row>
       </Container>
