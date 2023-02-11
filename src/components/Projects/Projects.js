@@ -1,16 +1,13 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
-import editor from "../../Assets/Projects/codeEditor.png";
 import NRICM101_Map from "../../Assets/Projects/Taiwan-NRICM101-Map.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
 import kaggleCard from "../../Assets/Projects/Kaggle-Profile-Card-API.png";
+import MediumtoWb from "../../Assets/Projects/Embed-Medium-on-Website.png"
 
 function Projects() {
   return (
     <Container fluid className="project-section">
-      <Particle />
       <Container>
         <h1 className="project-heading">
           My Recent <strong className="purple">Works </strong>
@@ -35,20 +32,20 @@ function Projects() {
               imgPath={kaggleCard}
               isBlog={false}
               title="Kaggle Profile Card API"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              description="Developed an API by Web Scraping competition data and presented through designing on HTML and CSS / SVG (serves stainless by embedding through HTML or Markdown), deployed on Vercel with Python for Kagglers to display their Kaggle profile at any time, everywhere, and effortlessly. It’s used in more than 10 countries."
+              ghLink="https://github.com/chienhsiang-hung/kaggle-profile-summary-card"
+              demoLink="https://chienhsiang-hung.github.io/kaggle-profile-summary-card/"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={MediumtoWb}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="Embed Medium on Website"
+              description="This is a free and simple guide through that you can finally embed your medium grid to your website by yourself without worrying about your personal info being packed by 3rd party APIs. #javascript #jquery"
+              ghLink="https://github.com/chienhsiang-hung/embed-medium-blog-on-website"
+              demoLink="https://chienhsiang-hung.github.io/embed-medium-blog-on-website/RWD"              
             />
           </Col>
         </Row>
