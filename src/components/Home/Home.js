@@ -31,9 +31,7 @@ function Home() {
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
-              <homeLogo />
               <img
-                id="home-main-svg"
                 src={homeLogo}
                 alt="home pic"
                 className="img-fluid"
