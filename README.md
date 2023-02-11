@@ -74,3 +74,8 @@ You will find all the components used and you can edit your information accordin
 Give a ⭐ if you like this website!
 
 <a href="https://www.buymeacoffee.com/soumyajit4419" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
+
+### rs
+https://svgartista.net/
+<a href="https://www.flaticon.com/free-icons/coding" title="coding icons">Coding icons created by juicy_fish - Flaticon</a>
+https://www.adobe.com/express/feature/image/convert/png-to-svg
