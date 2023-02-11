@@ -18,7 +18,7 @@ function Footer() {
           {/* <h3>Designed and Developed by Soumyajit Behera</h3> */}
         </Col>
         <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} HCH</h3>
+          <h3>Copyright © {year} <a href="/#" style={{ textDecoration:"inherit", color:"inherit" }}>HCH</a></h3>
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
