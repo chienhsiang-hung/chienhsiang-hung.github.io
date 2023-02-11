@@ -30,14 +30,13 @@ function Home2() {
               <i>
                 <b className="purple">Web Technologies and Products </b> and
                 also in areas related to{" "}
-                <b className="purple">
-                  Deep Learning and Natural Launguage Processing.
-                </b>
+                <b className="purple">RPA, Web Scraping, Reverse Engineering, Machine Learning </b>
+                and <b className="purple">Deep Learning</b>.
               </i>
               <br />
               <br />
               Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
+              with <b className="purple">Python</b> and
               <i>
                 <b className="purple">
                   {" "}
@@ -65,7 +64,7 @@ function Home2() {
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
-                  href="https://github.com/soumyajit4419"
+                  href="https://github.com/chienhsiang-hung"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
