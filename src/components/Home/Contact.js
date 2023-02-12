@@ -16,8 +16,13 @@ export function ContactUs() {
     )
       .then((result) => {
         console.log(result.text);
+        document.getElementById("from_name").value = "";
+        document.getElementById("from_email").value = "";
+        document.getElementById("message").value = "";
+        alert("Thank you for reaching out. I will get back to you soon!");
       }, (error) => {
         console.log(error.text);
+        alert(error.text);
       });
   };
 
@@ -34,11 +39,10 @@ export function ContactUs() {
           </div>
 
           <div class="input-container ic2">
-            <input name='from_email' id="from_email" class="input" type="text" placeholder=" " />
+            <input name='from_email' id="from_email" class="input" type="email" placeholder=" " required />
             <div class="cut"></div>
             <label for="from_email" class="placeholder">Email</label>
           </div>
-
 
           <div class="input-container ic2" style={{height:"100px"}}>
             <textarea name="message" id="message" class="input" type="text" placeholder=" " />
