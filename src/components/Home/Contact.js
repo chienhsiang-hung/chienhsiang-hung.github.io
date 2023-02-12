@@ -1,11 +1,12 @@
 import React, { useRef } from 'react';
-import emailjs, { send } from '@emailjs/browser';
-import "./Contact.css"
+import emailjs from '@emailjs/browser';
+import './Contact.css';
 
-export function ContactUs() {
+export function ContactUs(props) {
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = (e, upadateLoad) => {
+    // upadateLoad(true);
     e.preventDefault();
 
     emailjs.sendForm(

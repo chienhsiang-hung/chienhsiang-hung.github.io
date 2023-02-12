@@ -10,7 +10,7 @@ import {
 import { FaLinkedinIn } from "react-icons/fa";
 import { ContactUs } from "./Contact";
 
-function Home2() {
+function Home2(props) {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
@@ -107,7 +107,7 @@ function Home2() {
                 </a>
               </li>
             </ul>
-            <ContactUs />
+            <ContactUs upadateLoad={props.upadateLoad} />
           </Col>
         </Row>
       </Container>
