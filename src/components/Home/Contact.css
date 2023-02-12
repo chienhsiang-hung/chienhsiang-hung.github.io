@@ -1,9 +1,10 @@
-/* https://codepen.io/ainalem/pen/GRqPwoz */
+/* originally from https://codepen.io/ainalem/pen/GRqPwoz */
 
-.form-parent {
+form {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .form {
@@ -12,7 +13,13 @@
   box-sizing: border-box;
   height: 600px;
   padding: 20px;
-  width: 320px;
+  width: 80%;
+}
+
+@media (max-width: 767px) {
+  .form {
+    width: 320px;
+  }
 }
 
 .title {
@@ -80,6 +87,7 @@
 }
 
 .placeholder {
+  background-color: transparent !important;
   color: #65657b;
   font-family: sans-serif;
   left: 20px;
@@ -94,9 +102,6 @@
 .input:focus ~ .placeholder,
 .input:not(:placeholder-shown) ~ .placeholder {
   transform: translateY(-30px) translateX(10px) scale(0.75);
-}
-
-.input:not(:placeholder-shown) ~ .placeholder {
   color: #808097;
 }
 
