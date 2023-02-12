@@ -2,11 +2,10 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 
-export function ContactUs(props) {
+export function ContactUs() {
   const form = useRef();
 
-  const sendEmail = (e, upadateLoad) => {
-    // upadateLoad(true);
+  const sendEmail = (e) => {
     e.preventDefault();
     document.getElementById("preloader-none").id = "preloader";
 
@@ -26,7 +25,7 @@ export function ContactUs(props) {
         alert("Thank you for reaching out. I will get back to you soon!");
       }, (error) => {
         console.log(error.text);
-
+        
         document.getElementById("preloader").id="preloader-none";
         alert(error.text);
       });

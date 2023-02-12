@@ -4,7 +4,7 @@ import homeLogo from "../../Assets/home-main.png";
 import Home2 from "./Home2";
 import Type from "./Type";
 
-function Home(props) {
+function Home() {
   return (
     <section>
       <Container fluid className="home-section" id="home">
@@ -39,7 +39,7 @@ function Home(props) {
           </Row>
         </Container>
       </Container>
-      <Home2 upadateLoad={props.upadateLoad} />
+      <Home2 />
     </section>
   );
 }
