@@ -26,11 +26,10 @@ export function ContactUs(props) {
         alert("Thank you for reaching out. I will get back to you soon!");
       }, (error) => {
         console.log(error.text);
-        
+
         document.getElementById("preloader").id="preloader-none";
         alert(error.text);
-      })
-      .then(() => document.getElementById("preloader").id="preloader-none");
+      });
   };
 
   return (
