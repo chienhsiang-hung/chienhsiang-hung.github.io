@@ -8,6 +8,7 @@ export function ContactUs(props) {
   const sendEmail = (e, upadateLoad) => {
     // upadateLoad(true);
     e.preventDefault();
+    document.getElementById("preloader-none").id = "preloader";
 
     emailjs.sendForm(
       process.env.REACT_APP_EmailJS_SERVICE_ID,
@@ -20,11 +21,16 @@ export function ContactUs(props) {
         document.getElementById("from_name").value = "";
         document.getElementById("from_email").value = "";
         document.getElementById("message").value = "";
+
+        document.getElementById("preloader").id="preloader-none";
         alert("Thank you for reaching out. I will get back to you soon!");
       }, (error) => {
         console.log(error.text);
+        
+        document.getElementById("preloader").id="preloader-none";
         alert(error.text);
-      });
+      })
+      .then(() => document.getElementById("preloader").id="preloader-none");
   };
 
   return (
