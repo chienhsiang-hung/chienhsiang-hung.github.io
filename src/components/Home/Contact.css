@@ -6,13 +6,26 @@
   justify-content: center;
 }
 
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .form {
   background-color: #15172b;
   border-radius: 20px;
   box-sizing: border-box;
   height: 600px;
   padding: 20px;
-  width: 320px;
+  width: 80%;
+}
+
+@media (max-width: 767px) {
+  .form {
+    width: 320px;
+  }
 }
 
 .title {
