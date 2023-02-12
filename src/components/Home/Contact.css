@@ -1,11 +1,3 @@
-/* https://codepen.io/ainalem/pen/GRqPwoz */
-
-.form-parent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 form {
   display: flex;
   align-items: center;
@@ -93,6 +85,7 @@ form {
 }
 
 .placeholder {
+  background-color: transparent !important;
   color: #65657b;
   font-family: sans-serif;
   left: 20px;
@@ -107,9 +100,6 @@ form {
 .input:focus ~ .placeholder,
 .input:not(:placeholder-shown) ~ .placeholder {
   transform: translateY(-30px) translateX(10px) scale(0.75);
-}
-
-.input:not(:placeholder-shown) ~ .placeholder {
   color: #808097;
 }
 
