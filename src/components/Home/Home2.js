@@ -20,7 +20,7 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I am an <b className="purple">IT Manager</b> of Data and Digital Integration Team at WAM - one of the biggest family offices offering tailor-made financial services to high-net-worth individuals. I build a CRM system, Structured-products Quotation system, Risk Monitor, Portfolio Management system, etc.
+              I am an IT <b className="purple">MA</b> at Fubon Financial Holding Co., Ltd. 富邦金控
               <br />
               <br />I am fluent in classics like
               <i>
