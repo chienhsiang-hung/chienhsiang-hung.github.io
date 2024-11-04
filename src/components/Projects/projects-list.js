@@ -1,8 +1,26 @@
+import VoiceAndWavCloningImage from "../../Assets/Projects/VoiceAndWavCloningImage.png";
+import GiveMeSQLImage from "../../Assets/Projects/givemesql.png";
 import NRICM101_Map from "../../Assets/Projects/Taiwan-NRICM101-Map.png";
 import kaggleCard from "../../Assets/Projects/Kaggle-Profile-Card-API.png";
 import MediumtoWb from "../../Assets/Projects/Embed-Medium-on-Website.png";
 
 export const projects_list = [
+  {
+    "imgPath": VoiceAndWavCloningImage,
+    "isBlog": false,
+    "title": "Voice and Wav Cloning",
+    "description": "Implemented a voice and wav cloning project that synthesizes high-quality speech audio from text inputs using advanced deep learning techniques. Utilized Python for backend processing and various machine learning frameworks.",
+    "ghLink": "https://github.com/chienhsiang-hung/voice-and-wav-cloning",
+    "demoLink": "https://colab.research.google.com/github/chienhsiang-hung/voice-and-wav-cloning/blob/main/colab_webui.ipynb"
+  },
+  {
+    "imgPath": GiveMeSQLImage,
+    "isBlog": false,
+    "title": "GiveMeSQL",
+    "description": "Generate your SQL query with OpenAI and Vercel Edge Functions. Developed an SQL query generator which simplifies writing SQL queries. Features include query building using form inputs, syntax highlighting, and error handling. Utilized React for frontend and Node.js for backend.",
+    "ghLink": "https://github.com/chienhsiang-hung/givemesql",
+    "demoLink": "https://chienhsiang-hung.github.io/givemesql/"
+  },
   {
     "imgPath": NRICM101_Map,
     "isBlog": false,
