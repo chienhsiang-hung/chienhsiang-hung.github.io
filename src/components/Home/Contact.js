@@ -46,7 +46,7 @@ export function ContactUs() {
           <div class="input-container ic2">
             <input name='from_email' id="from_email" class="input" type="email" placeholder=" " required />
             <div class="cut"></div>
-            <label for="from_email" class="placeholder">Email</label>
+            <label for="from_email" class="placeholder">Your Email</label>
           </div>
 
           <div class="input-container ic2" style={{height:"100px"}}>
