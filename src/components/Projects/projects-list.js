@@ -11,7 +11,7 @@ export const projects_list = [
     "title": "Voice and Wav Cloning",
     "description": "Implemented a voice and wav cloning project that synthesizes high-quality speech audio from text inputs using advanced deep learning techniques. Utilized Python for backend processing and various machine learning frameworks.",
     "ghLink": "https://github.com/chienhsiang-hung/voice-and-wav-cloning",
-    "demoLink": "https://colab.research.google.com/github/chienhsiang-hung/voice-and-wav-cloning/blob/main/colab_webui.ipynb"
+    "demoLink": "https://chienhsiang-hung.github.io/blog/posts/2024/voice-and-wav-cloning/"
   },
   {
     "imgPath": GiveMeSQLImage,
