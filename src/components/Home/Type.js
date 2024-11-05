@@ -8,7 +8,6 @@ function Type() {
         strings: [
           "Software Engineer",
           "Full Stack Developer",
-          "Assistant Manager",
           "Kaggle All-round Expert",
         ],
         autoStart: true,

@@ -19,38 +19,22 @@ function Home2() {
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
+            <p>
+              <a href="https://github.com/chienhsiang-hung" target="_blank">
+                <img alt="GitHub followers" src="https://img.shields.io/github/followers/chienhsiang-hung"></img>
+              </a>
+            </p>
             <p className="home-about-body">
-              I am an IT <b className="purple">MA</b> at Fubon Financial Holding Co., Ltd. 富邦金控
+              I am an <b className="purple">MA</b> at Fubon Financial Holding Co., Ltd. <i>(富邦金控)</i> IT Department.
+              I am <b className="purple">leading</b> the AI application implemetation in the organization.
+              <br /><br />
+              Whenever I get the chance,
               <br />
-              <br />I am fluent in classics like
-              <i>
-                <b className="purple"> Python and JavaScript</b>.
-              </i>
-
+              I love developing products with <i><b className="purple">Python</b></i> and modern <i><b className="purple">JavaScript (TypeScript)</b></i> libraries and frameworks like <i><b className="purple">React.js and Next.js</b></i>.
               <br />
-              <br />
-              My field of Interest's are building new &nbsp;
-              <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in areas related to{" "}
-                <b className="purple">
-                  RPA, Web Scraping, Reverse Engineering, Machine Learning, and Deep Learning
-                </b>
-              </i>.
-              <br />
-              <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Python</b> and
-              <i>
-                <b className="purple">
-                  {" "}
-                  Modern Javascript Library and Frameworks
-                </b>
-              </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> React.js and Next.js</b>
-              </i>.
+              Plus, I've got some solid experience with cloud platforms like <i><b className="purple">Azure and AWS</b></i>.
+              <br /><br />
+              On top of that, I'm well-versed in containerization and microservices, using tools like <i><b className="purple">Kubernetes (k8s), ArgoCD, and Harbor</b></i>.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
