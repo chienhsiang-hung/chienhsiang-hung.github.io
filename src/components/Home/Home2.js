@@ -19,11 +19,11 @@ function Home2() {
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
-            <p>
+            {/* <p>
               <a href="https://github.com/chienhsiang-hung" target="_blank">
                 <img alt="GitHub followers" src="https://img.shields.io/github/followers/chienhsiang-hung"></img>
               </a>
-            </p>
+            </p> */}
             <p className="home-about-body">
               I am an <b className="purple">MA</b> at Fubon Financial Holding Co., Ltd. <i>(富邦金控)</i> IT Department.
               I am <b className="purple">leading</b> the AI application implemetation in the organization.

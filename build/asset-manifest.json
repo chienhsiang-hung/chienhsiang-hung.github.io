@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7b0b33e5.css",
-    "main.js": "/static/js/main.5b56650f.js",
+    "main.js": "/static/js/main.bbe9d981.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/Embed-Medium-on-Website.png": "/static/media/Embed-Medium-on-Website.c365668ffed09b1801b6.png",
     "static/media/Taiwan-NRICM101-Map.png": "/static/media/Taiwan-NRICM101-Map.3f77d920e0b80dccbd69.png",
@@ -17,11 +17,11 @@
     "index.html": "/index.html",
     "static/media/pre.svg": "/static/media/pre.7bdf5eb9ccbf9ab2cb57.svg",
     "main.7b0b33e5.css.map": "/static/css/main.7b0b33e5.css.map",
-    "main.5b56650f.js.map": "/static/js/main.5b56650f.js.map",
+    "main.bbe9d981.js.map": "/static/js/main.bbe9d981.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7b0b33e5.css",
-    "static/js/main.5b56650f.js"
+    "static/js/main.bbe9d981.js"
   ]
 }
