@@ -2,6 +2,7 @@ import VoiceAndWavCloningImage from "../../Assets/Projects/VoiceAndWavCloningIma
 import GiveMeSQLImage from "../../Assets/Projects/givemesql.png";
 import NRICM101_Map from "../../Assets/Projects/Taiwan-NRICM101-Map.png";
 import kaggleCard from "../../Assets/Projects/Kaggle-Profile-Card-API.png";
+import JavaScriptLanguageSwitcherImage from "../../Assets/Projects/JavaScriptLanguageSwitcher.png";
 import MediumtoWb from "../../Assets/Projects/Embed-Medium-on-Website.png";
 
 export const projects_list = [
@@ -36,6 +37,14 @@ export const projects_list = [
     "description": "Developed an API by Web Scraping competition data and presented through designing on HTML and CSS / SVG (serves stainless by embedding through HTML or Markdown), deployed on Vercel with Python for Kagglers to display their Kaggle profile at any time, everywhere, and effortlessly. It’s used in more than 10 countries.",
     "ghLink": "https://github.com/chienhsiang-hung/kaggle-profile-summary-card",
     "demoLink": "https://chienhsiang-hung.github.io/kaggle-profile-summary-card/"
+  },
+  {
+    "imgPath": JavaScriptLanguageSwitcherImage,
+    "isBlog": false,
+    "title": "JavaScript Language Switcher",
+    "description": "A simple JavaScript language switcher that allows users to easily switch between multiple languages on websites. Supports dynamic language switching without page reloads. The project uses pure JavaScript and is lightweight, making it easy to integrate into any project.",
+    "ghLink": "https://github.com/chienhsiang-hung/javascript-language-switcher",
+    "demoLink": "https://chienhsiang-hung.github.io/javascript-language-switcher/"
   },
   {
     "imgPath": MediumtoWb,
