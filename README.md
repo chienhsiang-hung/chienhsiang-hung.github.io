@@ -12,10 +12,12 @@ Open [http://localhost:3000](http://localhost:3000/) to view it in the browser. 
 ### Build
 `npm run build`
 #### Check build
-`serve -s build -l 4000`
+`serve -s build`
 
 ## Built With
-[Soumyajit4419/Portfolio](https://github.com/soumyajit4419/Portfolio) added `EmailJS` with a beautiful `form` from [Placeholders (codepen.io)](https://codepen.io/ainalem/pen/GRqPwoz).
+
+- Use the [Repos GitHub API](https://developer.github.com/v3/repos/#get) to retrieve this information. See [How to find the created date of a repository project on GitHub?](https://stackoverflow.com/questions/23611669/how-to-find-the-created-date-of-a-repository-project-on-github).
+- [Soumyajit4419/Portfolio](https://github.com/soumyajit4419/Portfolio) added `EmailJS` with a beautiful `form` from [Placeholders (codepen.io)](https://codepen.io/ainalem/pen/GRqPwoz).
 
 ### Others Stacks
 -   React.js

@@ -2,11 +2,17 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import {
   SiMicrosoftazure,
-  SiAmazonaws,
   SiVisualstudiocode,
   SiVercel,
   SiCloudflare,
+  SiHarbor,
+  SiKubernetes,
+  SiArgo,
+  SiAzuredevops,
+  SiGooglecolab,
+  SiJupyter
 } from "react-icons/si";
+import { BiLogoAws } from "react-icons/bi";
 
 function Toolstack() {
   return (
@@ -15,7 +21,7 @@ function Toolstack() {
         <SiMicrosoftazure />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiAmazonaws />
+        <BiLogoAws />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiVisualstudiocode />
@@ -25,6 +31,24 @@ function Toolstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiCloudflare />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiHarbor />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiKubernetes />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiArgo />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiAzuredevops />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiGooglecolab />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiJupyter />
       </Col>
     </Row>
   );
