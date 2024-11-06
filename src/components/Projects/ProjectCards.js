@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
+import GitHubRepoCreatedAt from "./GitHubRepoCreatedAt";
 
 function ProjectCards(props) {
   return (
@@ -33,6 +34,13 @@ function ProjectCards(props) {
             {"Demo"}
           </Button>
         )}
+      </Card.Body>
+      <Card.Body>
+        <footer className="blockquote-footer">
+          <GitHubRepoCreatedAt
+            repoName = {props.ghLink.split('https://github.com/')[1]}
+          ></GitHubRepoCreatedAt>
+        </footer>
       </Card.Body>
     </Card>
   );
