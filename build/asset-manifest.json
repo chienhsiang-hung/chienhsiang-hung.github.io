@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.7b0b33e5.css",
-    "main.js": "/static/js/main.bbe9d981.js",
-    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
+    "main.css": "/static/css/main.5532452b.css",
+    "main.js": "/static/js/main.7b7b871f.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/Embed-Medium-on-Website.png": "/static/media/Embed-Medium-on-Website.c365668ffed09b1801b6.png",
     "static/media/Taiwan-NRICM101-Map.png": "/static/media/Taiwan-NRICM101-Map.3f77d920e0b80dccbd69.png",
     "static/media/Hung_ChienHsiang_Resume.pdf": "/static/media/Hung_ChienHsiang_Resume.e6b5fccc2faa604a0f85.pdf",
     "static/media/VoiceAndWavCloningImage.png": "/static/media/VoiceAndWavCloningImage.fd1b687de48e58d61ad8.png",
     "static/media/Kaggle-Profile-Card-API.png": "/static/media/Kaggle-Profile-Card-API.dc4078a6fa891f462a30.png",
     "static/media/home-main.png": "/static/media/home-main.5403cf1358f3c78ef3b8.png",
+    "static/media/JavaScriptLanguageSwitcher.png": "/static/media/JavaScriptLanguageSwitcher.aafa01dc2c57cc8b2cab.png",
     "static/media/avatar.png": "/static/media/avatar.1f9bd6d1150f8625c37b.png",
     "static/media/about.png": "/static/media/about.fe9aa90d132197b4cf06.png",
     "static/media/givemesql.png": "/static/media/givemesql.284584a23ab400ef5ce2.png",
     "static/media/home-bg.jpg": "/static/media/home-bg.b3ca291b191434fa5c1e.jpg",
     "static/media/logo.svg": "/static/media/logo.b1088aa1ab5d761d6032bdd0b41d6368.svg",
     "index.html": "/index.html",
-    "static/media/pre.svg": "/static/media/pre.7bdf5eb9ccbf9ab2cb57.svg",
-    "main.7b0b33e5.css.map": "/static/css/main.7b0b33e5.css.map",
-    "main.bbe9d981.js.map": "/static/js/main.bbe9d981.js.map",
-    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
+    "static/media/pre.svg": "/static/media/pre.abcb3713dfe62712adb9.svg",
+    "main.5532452b.css.map": "/static/css/main.5532452b.css.map",
+    "main.7b7b871f.js.map": "/static/js/main.7b7b871f.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b0b33e5.css",
-    "static/js/main.bbe9d981.js"
+    "static/css/main.5532452b.css",
+    "static/js/main.7b7b871f.js"
   ]
 }
