@@ -6,14 +6,16 @@ import {
   DiReact,
   DiNodejs,
   DiMongodb,
+  DiPostgresql,
+  DiMysql,
   DiPython,
   DiGit,
-  DiMysql,
+  DiDocker
 } from "react-icons/di";
 import {
   SiTensorflow,
   SiPytorch,
-  SiNextdotjs,
+  SiNextdotjs
 } from "react-icons/si";
 
 function Techstack() {
@@ -32,13 +34,16 @@ function Techstack() {
         <DiReact />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
         <SiNextdotjs />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiGit />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiMongodb />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiPostgresql />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiMysql />
@@ -48,6 +53,9 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiPytorch />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiDocker />
       </Col>
     </Row>
   );
