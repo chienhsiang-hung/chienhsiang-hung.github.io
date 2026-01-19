@@ -25,12 +25,11 @@ function Home2() {
               </a>
             </p> */}
             <p className="home-about-body">
-              I am an <b className="purple">MA</b> at Fubon Financial Holding Co., Ltd. <i>(富邦金控)</i> IT Department.
-              I am <b className="purple">leading</b> the AI application implemetation in the organization.
+              I am an <b className="purple">Software Engineer</b> at <b>TSMC</b> IT Department.
               <br /><br />
               Whenever I get the chance,
               <br />
-              I love developing products with <i><b className="purple">Python</b></i> and modern <i><b className="purple">JavaScript (TypeScript)</b></i> libraries and frameworks like <i><b className="purple">React.js and Next.js</b></i>.
+              I love developing products with <i><b className="purple">Python/Java</b></i> and modern <i><b className="purple">JavaScript (TypeScript)</b></i> libraries and frameworks like <i><b className="purple">React.js and Next.js</b></i>.
               <br />
               Plus, I've got some solid experience with cloud platforms like <i><b className="purple">Azure and AWS</b></i>.
               <br /><br />

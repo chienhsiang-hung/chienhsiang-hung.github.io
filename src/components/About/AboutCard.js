@@ -9,7 +9,7 @@ function AboutCard() {
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Hsiang, </span>
-            from <span className="purple"> Taipei, Taiwan.</span>
+            from <span className="purple"> Taiwan.</span>
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
