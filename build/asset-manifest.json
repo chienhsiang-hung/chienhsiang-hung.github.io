@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.761cf7e8.css",
+    "main.js": "/static/js/main.2b11bbe7.js",
+    "static/js/206.4644f2ac.chunk.js": "/static/js/206.4644f2ac.chunk.js",
+    "static/media/Embed-Medium-on-Website.png": "/static/media/Embed-Medium-on-Website.c365668ffed09b1801b6.png",
+    "static/media/Taiwan-NRICM101-Map.png": "/static/media/Taiwan-NRICM101-Map.3f77d920e0b80dccbd69.png",
+    "static/media/Hung_ChienHsiang_Resume.pdf": "/static/media/Hung_ChienHsiang_Resume.e6b5fccc2faa604a0f85.pdf",
+    "static/media/VoiceAndWavCloningImage.png": "/static/media/VoiceAndWavCloningImage.fd1b687de48e58d61ad8.png",
+    "static/media/Kaggle-Profile-Card-API.png": "/static/media/Kaggle-Profile-Card-API.dc4078a6fa891f462a30.png",
+    "static/media/home-main.png": "/static/media/home-main.5403cf1358f3c78ef3b8.png",
+    "static/media/JavaScriptLanguageSwitcher.png": "/static/media/JavaScriptLanguageSwitcher.aafa01dc2c57cc8b2cab.png",
+    "static/media/avatar.png": "/static/media/avatar.1f9bd6d1150f8625c37b.png",
+    "static/media/about.png": "/static/media/about.fe9aa90d132197b4cf06.png",
+    "static/media/givemesql.png": "/static/media/givemesql.284584a23ab400ef5ce2.png",
+    "static/media/home-bg.jpg": "/static/media/home-bg.b3ca291b191434fa5c1e.jpg",
+    "static/media/logo.svg": "/static/media/logo.b1088aa1ab5d761d6032bdd0b41d6368.svg",
+    "index.html": "/index.html",
+    "static/media/pre.svg": "/static/media/pre.7bdf5eb9ccbf9ab2cb57.svg"
+  },
+  "entrypoints": [
+    "static/css/main.761cf7e8.css",
+    "static/js/main.2b11bbe7.js"
+  ]
+}
