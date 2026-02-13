@@ -11,9 +11,11 @@ function App() {
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px] mix-blend-screen pointer-events-none" />
         <div className="absolute top-[20%] left-[-10%] w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[100px] mix-blend-screen pointer-events-none" />
         
-        <div className="absolute inset-0 opacity-60">
-             {/* 這裡暫時註解掉，等你準備好 URL 再打開，以免報錯 */}
-             <Spline scene="https://prod.spline.design/E-c2isixXR6O8Ukk/scene.splinecode" />
+        {/* --- (Gradient Overlay) --- */}
+        <div className="absolute inset-0 z-[5] bg-gradient-to-r from-[#050505]/80 via-[#050505]/40 to-transparent w-full md:w-2/3 pointer-events-none" />
+
+        <div className="absolute inset-0 opacity-80">
+          <Spline scene="https://prod.spline.design/E-c2isixXR6O8Ukk/scene.splinecode" />
         </div>
       </div>
 
@@ -37,8 +39,8 @@ function App() {
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-neutral-400 max-w-xl leading-relaxed mb-10">
-            I'm a Frontend Engineer specialized in <span className="text-white font-semibold">React</span> and <span className="text-white font-semibold">Web3</span> technologies. 
+          <p className="text-lg md:text-xl text-neutral-300 max-w-xl leading-relaxed mb-10">
+            I'm a <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300">Frontend Engineer</span> specialized in <span className="text-white font-bold underline decoration-purple-500/50">React</span> and <span className="text-white font-bold underline decoration-blue-500/50">Web3</span> technologies. 
             I craft pixel-perfect, performant digital experiences.
           </p>
 
