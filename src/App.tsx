@@ -29,7 +29,7 @@ function App() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
-            <span className="text-xs font-mono text-green-400 tracking-wider uppercase">Live</span>
+            <span className="text-xs font-mono text-green-400 tracking-wider uppercase">Taiwan</span>
           </div>
 
           <h1 className="text-5xl md:text-8xl font-bold tracking-tight mb-8">
@@ -90,7 +90,6 @@ function App() {
             </div>
           </SpotlightCard>
 
-          {/* 右側卡片: 技術棧 */}
           <SpotlightCard className="md:col-span-1 md:row-span-2 p-8">
             <div className="h-full flex flex-col">
               <Code size={24} className="text-blue-400 mb-6" />
@@ -106,15 +105,24 @@ function App() {
             </div>
           </SpotlightCard>
 
-          {/* 下方卡片 1: 數據/亮點 */}
-          <SpotlightCard className="p-6 flex flex-col justify-center">
+          <SpotlightCard className="p-4 flex flex-col justify-center border-blue-500/20 bg-blue-500/5">
+            <div className="text-xs font-mono text-blue-400 mb-2 uppercase tracking-widest">Current Role</div>
+            <div className="text-2xl font-bold text-white mb-1">TSMC</div>
+            <div className="text-sm text-neutral-400">Software Engineer</div>
+            <div className="mt-4 flex items-center gap-2">
+              <div className="h-1 w-full bg-neutral-800 rounded-full overflow-hidden">
+                <div className="h-full bg-blue-500 w-full animate-pulse"></div>
+              </div>
+            </div>
+          </SpotlightCard>
+
+          <SpotlightCard className="p-4 flex flex-col justify-center">
             <Zap size={24} className="text-yellow-400 mb-2" />
             <div className="text-3xl font-bold font-mono">98+</div>
             <div className="text-sm text-neutral-500">Performance Score</div>
           </SpotlightCard>
 
-          {/* 下方卡片 2: 聯絡 */}
-          <SpotlightCard className="p-6 md:col-span-2 flex items-center justify-between hover:bg-neutral-800/50 cursor-pointer transition-colors">
+          <SpotlightCard className="p-4 md:col-span-1 flex items-center justify-between hover:bg-neutral-800/50 cursor-pointer transition-colors">
             <div>
               <h3 className="text-lg font-bold">Start a Project</h3>
               <p className="text-sm text-neutral-400">Let's turn your idea into reality.</p>
@@ -127,7 +135,7 @@ function App() {
         </section>
 
         <footer className="mt-24 pt-8 border-t border-white/5 text-center text-neutral-600 text-sm">
-          <p>© 2026 Designed & Built by You.</p>
+          <p>© 2026 Designed & Built by Hsiang.</p>
         </footer>
 
       </main>
