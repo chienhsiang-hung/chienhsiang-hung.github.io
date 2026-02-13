@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/* v4 樣式設定 */
+@theme {
+  --color-background: #050505;
+  --color-foreground: #ffffff;
+}
+
+/* 這裡開始你的自定義樣式 */
+body {
+  /* 在 v4 中，直接寫在這裡 @apply 之前，必須確保上面已經 import 了 tailwindcss */
+  @apply bg-[#050505] text-white antialiased;
+  
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 100% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 50%);
+}
