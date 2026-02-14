@@ -1,8 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import "tailwindcss";
+
+/* v4 */
+@theme {
+  --color-background: #050505;
+  --color-foreground: #ffffff;
+}
+
 body {
-  margin: 0;
-  font-family: "Raleway", serif !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(15, 25, 35));
+  @apply bg-[#050505] text-white antialiased;
+  
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 100% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 50%);
 }
