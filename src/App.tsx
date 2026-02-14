@@ -29,7 +29,7 @@ function App() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
-            <span className="text-xs font-mono text-green-400 tracking-wider uppercase">Taiwan</span>
+            <span className="text-xs font-mono text-green-400 tracking-wider uppercase">Open to chat</span>
           </div>
 
           <h1 className="text-5xl md:text-8xl font-bold tracking-tight mb-8">
@@ -40,8 +40,8 @@ function App() {
           </h1>
 
           <p className="text-lg md:text-xl text-neutral-300 max-w-xl leading-relaxed mb-10">
-            I'm a <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300">Frontend Engineer</span> specialized in <span className="text-white font-bold underline decoration-purple-500/50">React</span> and <span className="text-white font-bold underline decoration-blue-500/50">Web3</span> technologies. 
-            I craft pixel-perfect, performant digital experiences.
+            I'm a <span className="text-white font-bold underline decoration-purple-500/50">Software Engineer</span> at <span className="text-white font-bold underline decoration-blue-500/50">TSMC</span> specializing in building full-stack <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300">scalable systems</span> and 
+            modern <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300">deep learning</span> applications.
           </p>
 
           <div className="flex flex-wrap gap-4">
