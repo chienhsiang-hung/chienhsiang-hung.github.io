@@ -1,14 +1,12 @@
 @import "tailwindcss";
 
-/* v4 樣式設定 */
+/* v4 */
 @theme {
   --color-background: #050505;
   --color-foreground: #ffffff;
 }
 
-/* 這裡開始你的自定義樣式 */
 body {
-  /* 在 v4 中，直接寫在這裡 @apply 之前，必須確保上面已經 import 了 tailwindcss */
   @apply bg-[#050505] text-white antialiased;
   
   background-image: 

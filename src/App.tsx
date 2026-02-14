@@ -48,7 +48,7 @@ function App() {
           <div className="flex flex-wrap gap-4">
             <button className="cursor-pointer group relative px-6 py-3 bg-white text-black font-semibold rounded-lg overflow-hidden transition-all hover:bg-neutral-200">
               <span className="relative z-10 flex items-center gap-2">
-                View Projects <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform"/>
+                Deprecated Projects <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform"/>
               </span>
             </button>
             <button className="cursor-pointer px-6 py-3 border border-white/10 text-white font-medium rounded-lg hover:bg-white/5 transition-colors flex items-center gap-2">
@@ -60,33 +60,44 @@ function App() {
         {/* Bento Grid Portfolio */}
         <div className="flex items-center gap-4 mb-8">
           <Layers size={20} className="text-purple-500" />
-          <h2 className="text-xl font-bold tracking-wide">Selected Work</h2>
+          <h2 className="text-xl font-bold tracking-wide">Selected Life & Work</h2>
         </div>
 
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(180px,auto)] pointer-events-auto">
           
-          {/* 大卡片: 主要專案 (2x2) */}
-          <SpotlightCard className="md:col-span-2 md:row-span-2 min-h-[300px] p-8 group">
+          {/* (2x2) */}
+          <SpotlightCard className="md:col-span-2 md:row-span-3 min-h-[300px] p-8 group">
             <div className="relative z-10 flex flex-col h-full justify-between">
               <div>
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-start gap-x-2 mb-4">
                   <span className="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-mono">
-                    WEB3 DAPP
+                    CASI
+                  </span>
+                  <span className="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-mono">
+                    JPGT
                   </span>
                 </div>
                 <h3 className="text-3xl font-bold mb-2 group-hover:text-purple-300 transition-colors">
-                  NFT Marketplace
+                  Snowboard Addict
                 </h3>
                 <p className="text-neutral-400 max-w-md">
-                  A decentralized marketplace built with Next.js, Solidity, and IPFS. 
-                  Features instant wallet connection and gas-optimized contracts.
+                   Certified <span className="text-white font-medium">CASI Instructor</span> trained in <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300">Canada</span>. 
+                   Passionate about technical precision on the slopes. Always chasing the perfect <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300">JP-style ground tricks</span> and helping others find their flow.
                 </p>
               </div>
               
-              {/* 裝飾性區塊 (模擬專案預覽圖) */}
-              <div className="mt-6 w-full h-64 bg-neutral-900 rounded-lg border border-white/5 overflow-hidden relative">
-                <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 to-black/20" />
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+              <div className="mt-6 w-full h-64 md:h-128 bg-black rounded-lg border border-white/5 overflow-hidden relative">
+                <video 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
+                >
+                  <source src="/my-demo-video.mp4" type="video/mp4" />
+                </video>
+                
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000080_1px,transparent_1px),linear-gradient(to_bottom,#00000080_1px,transparent_1px)] bg-[size:4px_4px] pointer-events-none" />
               </div>
             </div>
           </SpotlightCard>
@@ -132,6 +143,20 @@ function App() {
             </div>
             <div className="h-10 w-10 rounded-full bg-white text-black flex items-center justify-center">
               <Mail size={18} />
+            </div>
+          </SpotlightCard>
+
+          <SpotlightCard className="p-6 flex flex-col justify-center gap-4">
+            <h3 className="text-xs font-bold text-neutral-400 uppercase tracking-wider mb-1">Connect</h3>
+            <div className="flex gap-3 h-full items-center">
+              {/* LinkedIn Button */}
+              <a href="https://linkedin.com/in/你的ID" target="_blank" rel="noopener noreferrer" className="flex-1 h-12 rounded-lg bg-[#0077b5]/10 border border-[#0077b5]/30 flex items-center justify-center text-white hover:bg-[#0077b5]/30 transition-all group/link">
+                <svg className="w-5 h-5 fill-neutral-400 group-hover/link:fill-white transition-colors" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              {/* X (Twitter) Button */}
+              <a href="https://x.com/你的ID" target="_blank" rel="noopener noreferrer" className="flex-1 h-12 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-all group/link">
+                <svg className="w-5 h-5 fill-neutral-400 group-hover/link:fill-white transition-colors" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
             </div>
           </SpotlightCard>
         </section>
