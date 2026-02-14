@@ -1,4 +1,4 @@
-import React, { useRef, useState, MouseEvent } from "react";
+import React, { useRef, useState, type MouseEvent } from "react";
 
 interface SpotlightCardProps {
   children: React.ReactNode;

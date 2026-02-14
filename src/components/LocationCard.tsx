@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import createGlobe from 'cobe';
 import { MapPin } from 'lucide-react';
 import SpotlightCard from './SpotlightCard';

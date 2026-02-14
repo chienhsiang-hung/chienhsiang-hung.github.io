@@ -1,4 +1,3 @@
-import React from 'react';
 import { Cloud, renderSimpleIcon, type ICloud } from 'react-icon-cloud';
 import {
   siJavascript,
@@ -56,9 +55,7 @@ const icons = [
   siUbuntu,
 ];
 
-const renderCustomIcon = (icon: any, theme: string) => {
-  const bg = theme === 'light' ? '#fff' : '#000';
-  
+const renderCustomIcon = (icon: any, theme: string) => {  
   return renderSimpleIcon({
     icon,
     size: 42,
