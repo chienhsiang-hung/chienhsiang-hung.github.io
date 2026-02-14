@@ -57,7 +57,7 @@ function App() {
           </h1>
 
           <p className="text-lg md:text-xl text-neutral-300 max-w-xl leading-relaxed mb-10">
-            I'm a <span className="text-white font-bold underline decoration-purple-500/50">Software Engineer</span> at <span className="text-white font-bold underline decoration-blue-500/50">TSMC</span> specializing in building full-stack <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300">scalable systems</span> and 
+            I'm <span className="text-white font-bold">Chien-Hsiang Hung</span>, a <span className="text-white font-bold underline decoration-purple-500/50">Software Engineer</span> at <span className="text-white font-bold underline decoration-blue-500/50">TSMC</span> specializing in building full-stack <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300">scalable systems</span> and 
             modern <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300">deep learning</span> applications.
           </p>
 
@@ -173,7 +173,7 @@ function App() {
         </section>
 
         <footer className="mt-24 pt-8 border-t border-white/5 text-center text-neutral-600 text-sm pointer-events-auto">
-          <p>© 2026 Designed & Built by <a href="#" className='cursor-pointer hover:text-white transition-colors'>Hsiang</a>.</p>
+          <p>© 2026 Designed & Built by <a href="#" className='cursor-pointer hover:text-white transition-colors'>Chien-Hsiang Hung</a>.</p>
         </footer>
 
       </main>

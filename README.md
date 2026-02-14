@@ -2,7 +2,7 @@
 
 > A modern, high-performance personal portfolio website built with React, TypeScript, and Tailwind CSS. Featuring a "Web3" aesthetic with dark mode, glassmorphism, and interactive 3D elements.
 
-![Portfolio Preview](./public/preview.png)
+![Portfolio Preview](./public/og-image.jpeg)
 
 ## ✨ Features
 
