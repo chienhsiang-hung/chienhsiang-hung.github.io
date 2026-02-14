@@ -1,8 +1,29 @@
+import { useRef, useState, useEffect } from 'react';
 import Spline from '@splinetool/react-spline';
-import { Github, Layers, Zap, Code, Mail, ArrowRight } from 'lucide-react';
+import { Github, Layers, Zap, Code, Mail, ArrowRight, MapPin } from 'lucide-react';
 import SpotlightCard from './SpotlightCard';
 
 function App() {
+  const [time, setTime] = useState("");
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString('en-US', {
+        hour12: false,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        timeZone: 'Asia/Taipei'
+      });
+      setTime(timeString);
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen w-full relative overflow-x-hidden selection:bg-purple-500/30">
       
@@ -132,6 +153,32 @@ function App() {
             </div>
           </SpotlightCard>
 
+          <SpotlightCard className="p-0 relative overflow-hidden min-h-[160px] h-full flex flex-col justify-between">
+            {/* (Map Grid Effect) */}
+            <div className="absolute inset-0 opacity-20 pointer-events-none">
+              <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+            </div>
+            
+            <div className="relative z-10 p-5 h-full flex flex-col justify-between">
+              <div className="flex justify-between items-start">
+                <div className="p-2 bg-neutral-800/50 rounded-lg border border-white/10 backdrop-blur-md">
+                  <MapPin size={20} className="text-purple-400" />
+                </div>
+                <div className="px-2 py-1 bg-green-500/10 border border-green-500/20 rounded-full text-[10px] text-green-400 font-mono flex items-center gap-2">
+                  <span className="relative flex h-1.5 w-1.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+                  </span>
+                  {time || "Loading..."}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-white">Taiwan</h3>
+                <p className="text-xs text-neutral-400 mt-1">Hsinchu Science Park</p>
+              </div>
+            </div>
+          </SpotlightCard>
         </section>
 
         <footer className="mt-24 pt-8 border-t border-white/5 text-center text-neutral-600 text-sm">
