@@ -45,12 +45,12 @@ function App() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button className="group relative px-6 py-3 bg-white text-black font-semibold rounded-lg overflow-hidden transition-all hover:bg-neutral-200">
+            <button className="cursor-pointer group relative px-6 py-3 bg-white text-black font-semibold rounded-lg overflow-hidden transition-all hover:bg-neutral-200">
               <span className="relative z-10 flex items-center gap-2">
                 View Projects <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform"/>
               </span>
             </button>
-            <button className="px-6 py-3 border border-white/10 text-white font-medium rounded-lg hover:bg-white/5 transition-colors flex items-center gap-2">
+            <button className="cursor-pointer px-6 py-3 border border-white/10 text-white font-medium rounded-lg hover:bg-white/5 transition-colors flex items-center gap-2">
               <Github size={18} /> GitHub
             </button>
           </div>
