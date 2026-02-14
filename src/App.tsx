@@ -55,9 +55,12 @@ function App() {
                 Deprecated Projects <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform"/>
               </span>
             </a>
-            <button className="cursor-pointer px-6 py-3 border border-white/10 text-white font-medium rounded-lg hover:bg-white/5 transition-colors flex items-center gap-2">
+            <a
+               href="https://github.com/chienhsiang-hung/chienhsiang-hung.github.io/"
+               className="cursor-pointer px-6 py-3 border border-white/10 text-white font-medium rounded-lg hover:bg-white/5 transition-colors flex items-center gap-2"
+            >
               <Github size={18} /> GitHub
-            </button>
+            </a>
           </div>
         </header>
 
@@ -98,7 +101,7 @@ function App() {
                   playsInline
                   className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
                 >
-                  <source src="/my-demo-video.mp4" type="video/mp4" />
+                  <source src="/my-JPGT-sb-video.mp4" type="video/mp4" />
                 </video>
                 
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000080_1px,transparent_1px),linear-gradient(to_bottom,#00000080_1px,transparent_1px)] bg-[size:4px_4px] pointer-events-none" />

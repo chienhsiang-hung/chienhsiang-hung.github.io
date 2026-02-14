@@ -1,73 +1,73 @@
-# React + TypeScript + Vite
+# ⚡️ Web3-Style Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A modern, high-performance personal portfolio website built with React, TypeScript, and Tailwind CSS. Featuring a "Web3" aesthetic with dark mode, glassmorphism, and interactive 3D elements.
 
-Currently, two official plugins are available:
+![Portfolio Preview](./public/preview.png)
+*(建議：你可以截一張網站圖放在 public 資料夾並命名為 preview.png)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+* **🎨 Web3 Aesthetic**: Deep dark mode, neon glows, glassmorphism (backdrop-blur), and noise textures.
+* **🍱 Bento Grid Layout**: A fully responsive grid layout that adapts perfectly from mobile to desktop.
+* **🔦 Spotlight Effect**: Custom mouse-tracking spotlight effect on cards using React hooks.
+* **🌍 Interactive 3D Globe**: A draggable, auto-rotating 3D dot-matrix globe using `cobe`.
+* **☁️ 3D Icon Cloud**: Interactive floating tech stack sphere using `react-icon-cloud`.
+* **🧊 Spline 3D Integration**: Immersive 3D background scenes with GSAP entrance animations.
+* **⚡️ High Performance**: Built with Vite for instant server start and HMR.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Tech Stack
 
-## Expanding the ESLint configuration
+* **Core**: [React 18](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/), [Vite](https://vitejs.dev/)
+* **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+* **Animation**: [Framer Motion](https://www.framer.com/motion/), [GSAP](https://greensock.com/gsap/)
+* **3D & Interactive**: 
+    * [`@splinetool/react-spline`](https://spline.design/) (Hero Background)
+    * [`cobe`](https://github.com/shuding/cobe) (Interactive Globe)
+    * [`react-icon-cloud`](https://github.com/render-props/react-icon-cloud) (Tech Stack)
+* **Icons**: [Lucide React](https://lucide.dev/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* Node.js (v18 or higher recommended)
+* npm or yarn
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Installation
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+    cd your-repo-name
+    ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+3.  **Run development server**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Build for production**
+    ```bash
+    npm run build
+    ```
+
+## 📂 Project Structure
+
+```text
+src/
+├── components/
+│   ├── InteractiveIconCloud.tsx  # 3D Tech Stack Sphere
+│   ├── LocationCard.tsx          # Draggable Cobe Globe + Clock
+│   ├── SpotlightCard.tsx         # Reusable Card with Hover Glow
+│   └── ...
+├── App.tsx                       # Main Layout & Bento Grid
+├── main.tsx                      # Entry Point
+└── index.css                     # Global Styles & Tailwind Directives
+public/
+└── my-demo-video.mp4             # Video assets
 ```
