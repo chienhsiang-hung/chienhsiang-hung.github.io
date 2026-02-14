@@ -155,8 +155,8 @@ function App() {
           </SpotlightCard>
         </section>
 
-        <footer className="mt-24 pt-8 border-t border-white/5 text-center text-neutral-600 text-sm">
-          <p>© 2026 Designed & Built by Hsiang.</p>
+        <footer className="mt-24 pt-8 border-t border-white/5 text-center text-neutral-600 text-sm pointer-events-auto">
+          <p>© 2026 Designed & Built by <a href="#" className='cursor-pointer hover:text-white transition-colors'>Hsiang</a>.</p>
         </footer>
 
       </main>
