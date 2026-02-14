@@ -2,6 +2,7 @@ import Spline from '@splinetool/react-spline';
 import { Github, Layers, Zap, Code, Mail, ArrowRight } from 'lucide-react';
 import SpotlightCard from './components/SpotlightCard';
 import LocationCard from './components/LocationCard';
+import InteractiveIconCloud from './components/InteractiveIconCloud';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
       <main className="relative z-10 max-w-6xl mx-auto px-6 pt-20 pb-10 pointer-events-none">
         
         {/* Hero Section */}
-        <header className="flex flex-col justify-center min-h-[60vh] max-w-3xl pointer-events-auto">
+        <header className="flex flex-col justify-center min-h-[60vh] max-w-3xl pointer-events-auto pb-10 md:pb-12">
           <div className="flex items-center gap-2 mb-6">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -46,11 +47,14 @@ function App() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button className="cursor-pointer group relative px-6 py-3 bg-white text-black font-semibold rounded-lg overflow-hidden transition-all hover:bg-neutral-200">
+            <a 
+              href="https://chienhsiang-hung.github.io/v1-project-build-for-profile/" 
+              className="cursor-pointer group relative px-6 py-3 bg-white text-black font-semibold rounded-lg overflow-hidden transition-all hover:bg-neutral-200 inline-block"
+            >
               <span className="relative z-10 flex items-center gap-2">
                 Deprecated Projects <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform"/>
               </span>
-            </button>
+            </a>
             <button className="cursor-pointer px-6 py-3 border border-white/10 text-white font-medium rounded-lg hover:bg-white/5 transition-colors flex items-center gap-2">
               <Github size={18} /> GitHub
             </button>
@@ -58,7 +62,7 @@ function App() {
         </header>
 
         {/* Bento Grid Portfolio */}
-        <div className="flex items-center gap-4 mb-8">
+        <div className="flex items-center gap-4 mb-6">
           <Layers size={20} className="text-purple-500" />
           <h2 className="text-xl font-bold tracking-wide">Selected Life & Work</h2>
         </div>
@@ -102,18 +106,15 @@ function App() {
             </div>
           </SpotlightCard>
 
-          <SpotlightCard className="md:col-span-1 md:row-span-2 p-8">
-            <div className="h-full flex flex-col">
-              <Code size={24} className="text-blue-400 mb-6" />
-              <h3 className="text-xl font-bold mb-4">Tech Stack</h3>
-              <ul className="space-y-4 flex-grow">
-                {['React / Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Solidity', 'Ethers.js'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-neutral-400 hover:text-white transition-colors">
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.5)]" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+          {/* Tech Stack (Icon Cloud) */}
+          <SpotlightCard className="md:col-span-1 md:row-span-2 p-0 flex flex-col overflow-hidden relative min-h-[300px]">
+            <div className="absolute top-6 left-6 z-20 flex items-center gap-2 pointer-events-none">
+              <Code size={24} className="text-blue-400" />
+              <h3 className="text-xl font-bold">Tech Stack</h3>
+            </div>
+            
+            <div className="flex-1 w-full h-full flex items-center justify-center p-6 pt-10 md:pt-8">
+              <InteractiveIconCloud />
             </div>
           </SpotlightCard>
 
@@ -133,16 +134,6 @@ function App() {
               <div className="h-1 w-full bg-neutral-800 rounded-full overflow-hidden">
                 <div className="h-full bg-blue-500 w-full animate-pulse"></div>
               </div>
-            </div>
-          </SpotlightCard>
-
-          <SpotlightCard className="p-4 md:col-span-1 flex items-center justify-between hover:bg-neutral-800/50 cursor-pointer transition-colors">
-            <div>
-              <h3 className="text-lg font-bold">Start a Project</h3>
-              <p className="text-sm text-neutral-400">Let's turn your idea into reality.</p>
-            </div>
-            <div className="h-10 w-10 rounded-full bg-white text-black flex items-center justify-center">
-              <Mail size={18} />
             </div>
           </SpotlightCard>
 

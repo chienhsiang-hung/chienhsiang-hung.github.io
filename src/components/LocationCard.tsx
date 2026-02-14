@@ -5,10 +5,10 @@ import SpotlightCard from './SpotlightCard';
 
 const LocationCard = ({ className }: { className?: string }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const pointerInteracting = useRef(null);
-  const pointerInteractionMovement = useRef(0);
-  const [r, setR] = useState(0);
   const [time, setTime] = useState("");
+  
+  const pointerInteracting = useRef<number | null>(null);
+  const pointerInteractionMovement = useRef(0);
 
   useEffect(() => {
     const updateTime = () => {
@@ -29,7 +29,6 @@ const LocationCard = ({ className }: { className?: string }) => {
   useEffect(() => {
     let phi = 4.5;
     let width = 0;
-
     const onResize = () => canvasRef.current && (width = canvasRef.current.offsetWidth);
     window.addEventListener('resize', onResize);
     onResize();
@@ -51,58 +50,60 @@ const LocationCard = ({ className }: { className?: string }) => {
       glowColor: [0.2, 0.2, 0.2],
       opacity: 1,
       markers: [
-        { location: [24.774, 121.047], size: 0.1 } // (Hsinchu)
+        { location: [24.774, 121.047], size: 0.1 }, // Hsinchu
       ],
       onRender: (state) => {
         if (!pointerInteracting.current) {
           phi += 0.005;
         }
-        state.phi = phi + r;
+        
+        state.phi = phi + pointerInteractionMovement.current;
         state.width = width * 2;
         state.height = width * 2;
       }
     });
 
     setTimeout(() => canvasRef.current!.style.opacity = '1');
-    return () => { 
-        globe.destroy();
-        window.removeEventListener('resize', onResize);
+    return () => {
+      globe.destroy();
+      window.removeEventListener('resize', onResize);
     };
-  }, [r]);
+  }, []);
 
   return (
-    <SpotlightCard className={`p-0 relative overflow-hidden h-full min-h-[200px] flex flex-col justify-between ${className}`}>
-      {/* 3D Globe Canvas */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center opacity-80 mt-10">
+    <SpotlightCard className={`p-0 relative overflow-hidden h-full min-h-[300px] flex flex-col justify-between ${className}`}>
+      
+      {/* 3D Globe Canvas Container */}
+      <div 
+        className="absolute inset-0 z-0 flex items-center justify-center opacity-90 -mt-30 md:-mt-50 cursor-grab active:cursor-grabbing"
+        onPointerDown={(e) => {
+          pointerInteracting.current = e.clientX - pointerInteractionMovement.current;
+          if(canvasRef.current) canvasRef.current.style.cursor = 'grabbing';
+        }}
+        onPointerUp={() => {
+          pointerInteracting.current = null;
+          if(canvasRef.current) canvasRef.current.style.cursor = 'grab';
+        }}
+        onPointerOut={() => {
+          pointerInteracting.current = null;
+          if(canvasRef.current) canvasRef.current.style.cursor = 'grab';
+        }}
+        onMouseMove={(e) => {
+          if (pointerInteracting.current !== null) {
+            const delta = e.clientX - pointerInteracting.current;
+            pointerInteractionMovement.current = delta / 200;
+          }
+        }}
+        onTouchMove={(e) => {
+          if (pointerInteracting.current !== null && e.touches[0]) {
+            const delta = e.touches[0].clientX - pointerInteracting.current;
+            pointerInteractionMovement.current = delta / 200;
+          }
+        }}
+      >
          <canvas
-            ref={canvasRef}
-            style={{ width: 600, height: 600, maxWidth: '100%', aspectRatio: '1' }}
-            onPointerDown={(e) => {
-              pointerInteracting.current = e.clientX - pointerInteractionMovement.current;
-              canvasRef.current!.style.cursor = 'grabbing';
-            }}
-            onPointerUp={() => {
-              pointerInteracting.current = null;
-              canvasRef.current!.style.cursor = 'grab';
-            }}
-            onPointerOut={() => {
-              pointerInteracting.current = null;
-              canvasRef.current!.style.cursor = 'grab';
-            }}
-            onMouseMove={(e) => {
-              if (pointerInteracting.current !== null) {
-                const delta = e.clientX - pointerInteracting.current;
-                pointerInteractionMovement.current = delta;
-                setR(delta / 200);
-              }
-            }}
-            onTouchMove={(e) => {
-              if (pointerInteracting.current !== null && e.touches[0]) {
-                const delta = e.touches[0].clientX - pointerInteracting.current;
-                pointerInteractionMovement.current = delta;
-                setR(delta / 200);
-              }
-            }}
+           ref={canvasRef}
+           style={{ width: 600, height: 600, maxWidth: '100%', aspectRatio: '1' }}
          />
       </div>
       
